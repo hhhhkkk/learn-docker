@@ -1,0 +1,26 @@
+2019/08/14 09:55:21 [notice] 27#27: signal process started
+2019/08/14 10:26:18 [error] 28#28: *32 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'Redis' not found in /var/www/html/redis.php:5
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/redis.php on line 5" while reading response header from upstream, client: 10.26.56.169, server: localhost, request: "GET /redis.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "10.26.56.253"
+2019/08/14 10:28:13 [error] 28#28: *36 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'Redis' not found in /var/www/html/redis.php:5
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/redis.php on line 5" while reading response header from upstream, client: 10.26.56.169, server: localhost, request: "GET /redis.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "10.26.56.253"
+2019/08/14 10:37:23 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Exception: NO REDIS EXT in /var/www/html/redis.php:3
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/redis.php on line 3" while reading response header from upstream, client: 10.26.56.169, server: localhost, request: "GET /redis.php HTTP/1.1", upstream: "fastcgi://172.22.0.5:9000", host: "10.26.56.253"
+2019/08/14 10:38:54 [error] 6#6: *4 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Exception: NO REDIS EXT in /var/www/html/redis.php:3
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/redis.php on line 3" while reading response header from upstream, client: 10.26.56.169, server: localhost, request: "GET /redis.php HTTP/1.1", upstream: "fastcgi://172.22.0.5:9000", host: "10.26.56.253"
+2019/08/14 10:39:54 [error] 6#6: *4 FastCGI sent in stderr: "PHP message: PHP Warning:  Use of undefined constant redis - assumed 'redis' (this will throw an Error in a future version of PHP) in /var/www/html/redis.php on line 6
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/redis.php:0" while reading response header from upstream, client: 10.26.56.169, server: localhost, request: "GET /redis.php HTTP/1.1", upstream: "fastcgi://172.22.0.5:9000", host: "10.26.56.253"
+2019/08/14 10:39:55 [error] 6#6: *4 FastCGI sent in stderr: "PHP message: PHP Warning:  Use of undefined constant redis - assumed 'redis' (this will throw an Error in a future version of PHP) in /var/www/html/redis.php on line 6
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/redis.php:0" while reading response header from upstream, client: 10.26.56.169, server: localhost, request: "GET /redis.php HTTP/1.1", upstream: "fastcgi://172.22.0.5:9000", host: "10.26.56.253"
+2019/08/14 10:39:56 [error] 6#6: *4 FastCGI sent in stderr: "PHP message: PHP Warning:  Use of undefined constant redis - assumed 'redis' (this will throw an Error in a future version of PHP) in /var/www/html/redis.php on line 6
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/redis.php:0" while reading response header from upstream, client: 10.26.56.169, server: localhost, request: "GET /redis.php HTTP/1.1", upstream: "fastcgi://172.22.0.5:9000", host: "10.26.56.253"

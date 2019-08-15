@@ -1,0 +1,3 @@
+*.rdb
+mysql/data/
+redis/data/

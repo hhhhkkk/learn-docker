@@ -1,0 +1,49 @@
+version: '3'
+networks: 
+  web-network:
+
+services:
+  php: 
+    build:
+      context: ./php
+    volumes:
+      - "/home/alan/test/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
+      - "/home/alan/test/www:/var/www/html"
+    ports:
+      - "9000:9000"
+    networks: 
+      - web-network
+  nginx:
+    build:
+      context: ./nginx
+    volumes:
+      - "/home/alan/test/www:/var/www/html"
+      - "/home/alan/test/nginx/conf:/etc/nginx/conf.d"
+      - "/home/alan/test/nginx/logs:/var/log/nginx/"
+    ports:
+      - "80:80"
+    networks: 
+      - web-network
+  mysqldb:
+    image: mysql:5.7
+    environment:
+      - MYSQL_DATABASE=test
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+    ports:
+      - "3306:3306"
+    volumes:
+      - "/home/alan/test/mysql/data:/var/lib/mysql"
+      - "/home/alan/test/mysql/conf:/etc/mysql/conf.d"
+    networks:
+      - web-network
+  redis:
+    build:
+      context: ./redis
+    ports: 
+      - "6379:6379"
+    volumes:
+      - "/home/alan/test/redis:/data"
+    networks: 
+      - web-network
