@@ -25,7 +25,8 @@ services:
     networks: 
       - web-network
   mysqldb:
-    image: mysql:5.7
+    build:
+      context: ./mysql
     environment:
       - MYSQL_DATABASE=test
       - MYSQL_ROOT_PASSWORD=123456

@@ -1,4 +1,5 @@
 <?php
+ini_set('display_error', 'On');
 if (!extension_loaded('redis')) {
     throw new Exception('NO REDIS EXT');
 } else {
